@@ -7,17 +7,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot/app\about.component.ts" />
+    <Content Remove="wwwroot/app\app.routing.ts" />
+    <Content Remove="wwwroot/app\contact.component.ts" />
+    <Content Remove="wwwroot/app\index.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot/app\about.component.ts" />
+    <TypeScriptCompile Include="wwwroot/app\app.routing.ts" />
+    <TypeScriptCompile Include="wwwroot/app\contact.component.ts" />
+    <TypeScriptCompile Include="wwwroot/app\index.component.ts" />
   </ItemGroup>
 
 </Project>
