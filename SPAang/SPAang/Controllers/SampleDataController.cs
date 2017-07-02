@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SPAang.ViewModels;
 
 namespace SPAang.Controllers
 {
@@ -13,9 +14,17 @@ namespace SPAang.Controllers
     {
         // GET: api/SampleData
         [HttpGet]
-        public IEnumerable<string> Get()
+        public TestData Get()
         {
-            return new string[] { "value1", "value2" };
+            var testData = new TestData
+            {
+                Username = "BillBloggs",
+                EmailAddress = "bill.blogs@example.com",
+                Password = "@Passw0rd!",
+                Currency = 123.45M
+            };
+
+            return testData;
         }
 
         // GET: api/SampleData/5
