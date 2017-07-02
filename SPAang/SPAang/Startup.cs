@@ -49,8 +49,6 @@ namespace SPAang
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseDefaultFiles();
-
             app.UseStaticFiles();
 
             app.UseStaticFiles(new StaticFileOptions

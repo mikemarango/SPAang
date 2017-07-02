@@ -11,6 +11,8 @@
     <Content Remove="wwwroot/app\app.routing.ts" />
     <Content Remove="wwwroot/app\contact.component.ts" />
     <Content Remove="wwwroot/app\index.component.ts" />
+    <Content Remove="wwwroot/app\rxjs-operators.ts" />
+    <Content Remove="wwwroot/app\services\sampleData.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +39,8 @@
     <TypeScriptCompile Include="wwwroot/app\app.routing.ts" />
     <TypeScriptCompile Include="wwwroot/app\contact.component.ts" />
     <TypeScriptCompile Include="wwwroot/app\index.component.ts" />
+    <TypeScriptCompile Include="wwwroot/app\rxjs-operators.ts" />
+    <TypeScriptCompile Include="wwwroot/app\services\sampleData.service.ts" />
   </ItemGroup>
 
 </Project>
