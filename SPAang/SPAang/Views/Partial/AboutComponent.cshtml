@@ -8,28 +8,69 @@
 
 <p>Data:</p>
 
-<div *ngIf="testData != null">
-    <table>
-        <tr>
-            <th>Username:</th>
-            <td>{{ testData.username }}</td>
-        </tr>
-        <tr>
-            <th>Currency:</th>
-            <td>{{ testData.currency }}</td>
-        </tr>
-        <tr>
-            <th>Email Address:</th>
-            <td>{{ testData.emailAddress }}</td>
-        </tr>
-        <tr>
-            <th>Password:</th>
-            <td>{{ testData.password }}</td>
-        </tr>
-    </table>
-</div>
 
-<div *ngIf="errorMessage != null">
-    <p>Error:</p>
-    <pre>{{ errorMessage }}</pre>
-</div>
+<form>
+    <div *ngIf="testData != null">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Data Entry</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="testDataUsername">Username</label>
+                            <input type="text" id="testDataUsername" name="testDataUsername"
+                                   class="form-control" placeholder="Username"
+                                   [(ngModel)]="testData.username">
+                        </div>
+                        <div class="form-group">
+                            <label for="testDataCurrency">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="number" id="testDataCurrency" name="testDataCurrency"
+                                       class="form-control" placeholder="Amount"
+                                       [(ngModel)]="testData.currency">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="testDataemailaddress">Email address</label>
+                            <input type="email" id="testDataemailaddress" name="testDataemailaddress"
+                                   class="form-control" placeholder="Email Address"
+                                   [(ngModel)]="testData.emailAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="testDatapassword">Password</label>
+                            <input type="password" id="testDatapassword" name="testDatapassword"
+                                   class="form-control" placeholder="Password"
+                                   [(ngModel)]="testData.password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Data Display</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label">Username</label>
+                            <p class="form-control-static">{{ testData.username }}</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Amount (in dollars)</label>
+                            <p class="form-control-static">
+                                {{ testData.currency | currency:'USD':true:'1.2-2' }}
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email address</label>
+                            <p class="form-control-static">{{ testData.emailAddress }}</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <p class="form-control-static">{{ testData.password }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
